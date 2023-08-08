@@ -53,7 +53,7 @@ const createPlace = async (req, res, next) => {
       new HttpError("Invalid inputs passed, please check your data ", 422)
     );
   }
-  const { title, description, address } = req.body;
+  const { title, description, address, imageUrl } = req.body;
   let coordinates;
   try {
     coordinates = await getCoordsForAddress(address);
@@ -68,7 +68,7 @@ const createPlace = async (req, res, next) => {
       lat: coordinates.lat,
       lng: coordinates.lon,
     },
-    image: req.file.path,
+    image: imageUrl,
     creator: req.userData.userId,
   });
   let user;
@@ -158,7 +158,6 @@ const deletePlace = async (req, res, next) => {
       new HttpError("Somthing went wrong, could not delete place", 500)
     );
   }
-  fs.unlink(imagePath, (err) => {});
   res.status(200).json({ message: "Deleted place" });
 };
 exports.updatePlaceById = updatePlace;

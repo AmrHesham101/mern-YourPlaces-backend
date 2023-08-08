@@ -15,12 +15,13 @@ const getUsers = async (req, res, next) => {
 
 const signup = async (req, res, next) => {
   const error = validationResult(req);
+
   if (!error.isEmpty()) {
     return next(
       new HttpError("Invalid inputs passed, please check your data ", 422)
     );
   }
-  const { name, email, password } = req.body;
+  const { name, email, password, imageUrl } = req.body;
   let existingUser;
   try {
     existingUser = await UserModel.findOne({ email: email });
@@ -39,7 +40,7 @@ const signup = async (req, res, next) => {
   const createdUser = new UserModel({
     name,
     email,
-    image: req.file.path,
+    image: imageUrl,
     password: hashedPassword,
     places: [],
   });
