@@ -21,22 +21,6 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, DELETE");
   next();
 });
-app.use("/api/upload/cloudinary-sign", (req, res, next) => {
-  const timestamp = Math.round(new Date().getTime() / 1000);
-  let signature;
-  try {
-    signature = cloudinary.utils.api_sign_request(
-      {
-        timestamp: timestamp,
-      },
-      process.env.CLOUDINARY_SECRET
-    );
-  } catch (err) {
-    return next(new HttpError("failed in cloude ", 422));
-  }
-
-  res.status(201).json({  signature,  timestamp });
-});
 app.use("/api/places", placesRoutes);
 app.use("/api/users", usersRoutes);
 app.use((req, res, next) => {
