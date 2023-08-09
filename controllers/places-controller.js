@@ -1,5 +1,3 @@
-const { v4: uuidv4 } = require("uuid");
-const fs = require("fs");
 const { validationResult } = require("express-validator");
 const HttpError = require("../models/http-error");
 const getCoordsForAddress = require("../util/location");
