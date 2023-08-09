@@ -1,6 +1,6 @@
 # MERN YourPlaces Backend
 
-MERN YourPlaces Backend is the server-side of the MERN YourPlaces application, responsible for managing data and handling requests from the frontend.
+MERN YourPlaces Backend is the server side of the MERN YourPlaces application, responsible for managing data and handling requests from the front end.
 
 ## Installation
 
@@ -11,11 +11,12 @@ MERN YourPlaces Backend is the server-side of the MERN YourPlaces application, r
 3. Install dependencies:
     npm install
 4. Set up environment variables:
-    Create a `.env` file in the root directory and add the following environment variables:
-       1.PORT=5000
-       2.DB_USER=your-database-username
-       3.DB_PASSWORD=your-database-password
-       4.DB_NAME=your-database-name
+     - Create a `.env` file in the root directory and add the following environment variables:
+        - PORT=5000
+        - JWT_KEY=your-secret-token
+        - DB_USER=your-database-username
+        - DB_PASSWORD=your-database-password
+        - DB_NAME=your-database-name
 5. Start the server:
     npm start
 
@@ -30,7 +31,7 @@ The backend server will be running at http://localhost:5000. It provides APIs fo
 
 ## API Documentation
 
-API documentation and usage details can be found in the API Documentation (API_DOCUMENTATION.md) file.
+API documentation and usage details are in the API Documentation (API_DOCUMENTATION.md) file.
 
 ## Contributing
 
