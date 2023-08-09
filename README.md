@@ -31,7 +31,7 @@ The backend server will be running at http://localhost:5000. It provides APIs fo
 
 ## API Documentation
 
-API documentation and usage details are in the API Documentation (API_DOCUMENTATION.md) file.
+API documentation and usage details are in the API Documentation ([API_DOCUMENTATION.md](https://github.com/AmrHesham101/mern-YourPlaces-backend/blob/main/API_DOCUMENTATION.md)) file.
 
 ## Contributing
 
