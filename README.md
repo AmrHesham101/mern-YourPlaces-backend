@@ -12,10 +12,10 @@ MERN YourPlaces Backend is the server-side of the MERN YourPlaces application, r
     npm install
 4. Set up environment variables:
     Create a `.env` file in the root directory and add the following environment variables:
-       PORT=5000
-       DB_USER=your-database-username
-       DB_PASSWORD=your-database-password
-       DB_NAME=your-database-name
+       1.PORT=5000
+       2.DB_USER=your-database-username
+       3.DB_PASSWORD=your-database-password
+       4.DB_NAME=your-database-name
 5. Start the server:
     npm start
 
